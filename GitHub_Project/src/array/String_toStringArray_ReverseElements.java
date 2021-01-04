@@ -1,9 +1,7 @@
 package array;
 
 public class String_toStringArray_ReverseElements {
-	/*****************
-	 * program to convert String To String Array without using Spilt Function
-	 ********************/
+/**** program to convert String To String Array without using Spilt Function***/
 	static String S = "i love java";
 
 	static void rev() {
@@ -41,45 +39,26 @@ public class String_toStringArray_ReverseElements {
 		/***************** To Reverse Element in String Array ********************/
 
 		char cr[] = new char[cc.length]; // declare cr array length (cc.length)
-		String SG = ""; // to store reversed char array
-		for (int k = 0; k < G.length; k++) 
-		{
-		cr = G[k].toCharArray(); // convert every String Array iteration to char Array
-		for (int w = cr.length-1; w >= 0 ; w--) 
+		for (String s : G) {
+		cr = s.toCharArray(); // convert every String Array iteration to char Array
+		for (int i = 0; i < cr.length / 2; i++) 
+		{ 
+			char temper = cr[i];
+			cr[i] = cr[cr.length - i - 1];  //Transverse char array 
+			cr[cr.length - i - 1] = temper;
+		}
+		for (char g : cr) {
+			System.out.print(g);
+		}// print char array 
+		
+        /*----else we print the reversly get the o/p--------*/		
+		/*for (int w = cr.length-1; w >= 0 ; w--) 
 		    {
 				System.out.print(cr[w]);
-			}
+			}*/
 		} // k for outer for
-	}
-
-	public static void main(String[] args) {
+	}/*Static method*/
+public static void main(String[] args) {
 		rev(); // method calling
 	}
 }
-
-/*----------------------------Work-out codes-----------------------------------------------------------*/
-/*
- * for(int i=0;i<G.length;i++) 
- * { 
- * cr=G[i].toCharArray(); // G[o] convert to char
- * array for(int s=0;s<G[i].length()/2;s++) // Transverse 
- * { 
- * char temper=cr[s];
- * cr[s]=cr[G[i].length()-s-1]; 
- * cr[G[i].length()-s-1]=temper; 
- * } //for loop s
- * }//for loop i
- * 
- * for(int i=0;i<cr.length;i++) 
- * { System.out.print(cr[i]); //to print char array
- * cr }
- */
-
-/*
- * for(int g=G[i].length()-1;g>=0;g--) {
- * 
- * /* try { } catch(Exception ec) { System.out.println(ec); }
- */
-
-//	  cr[G[i].length()-i-1]=G[i];
-// } */
