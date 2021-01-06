@@ -111,10 +111,7 @@ for (int a=lineNumber;a<G.length;a++)
 
 		ArrayList<String> child = new ArrayList<String>();
 
-		/*
-		 * Write your logic here
-		*/
-
+		
 		System.out.println("Output: "+child);
 	}
 
