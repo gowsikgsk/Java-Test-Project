@@ -34,21 +34,23 @@ public class Task1 {
 	      System.out.println(lineNumber);
 	      TreeSet<String> tree = new TreeSet();
 		ArrayList<String> child = new ArrayList<String>();
-	       char cr[]=inputHTMLTags.toCharArray();
+	       char cr[]=inputHTMLTags.toCharArray(); //convert inputHTML file String to char Array 
 	       int counter=0;
 	       int j=0;
-	       String temp="";
+	       String temp=""; // Temporary String for String Array Creation
 	       for (int i=0;i<cr.length;i++)
 		    {
 			if (cr[i]=='<')
 			    {
-				counter=counter+1;
+				counter=counter+1; //To count < for String Array length
 			    }//if
 		    }// for
 
-String G[]=new String[counter];
+String G[]=new String[counter];   //Creation of Array
+
 for (int i=0;i<cr.length;i++)
 {
+	/*---------To filter char & Number--------*/
  if(cr[i]>=65&&cr[i]<=90||(cr[i]>=48&&cr[i]<=57)||(cr[i]>=97&&cr[i]<=122))
    {
 	temp=temp+cr[i];
@@ -56,22 +58,22 @@ for (int i=0;i<cr.length;i++)
   }//if
  else if(cr[i]=='>')
 	{
-	 G[j] = temp ;
-	 j++;
-	 temp ="";
+	 G[j] = temp ;  
+	 j++; // increase the iteration for String Array
+	 temp =""; // To empty temp String for next usage
 	 }//else
  }//for
 
-int line=lineNumber-1;
+int line=lineNumber-1; //if we enter 1 index 1 will be excuted but we need 0th index value . 
 /*--------2nd line-------*/
 if(G[line]==G[1])
   {
  for (int y=lineNumber;y<G[y].length();y++)
 {
   int ss=G[y].length();
-  if (ss==6&&(G[y].startsWith("c")))
+  if (ss==6&&(G[y].startsWith("c"))) 
   {
-   tree.add(G[y]);
+   tree.add(G[y]);   //added into treeset to eliminate duplicates
 //  System.out.println(tree);
    }//if ss
  }//for y
@@ -79,26 +81,26 @@ if(G[line]==G[1])
 
  /*--------1st line-------*/
   else if(G[line]==G[0])
-	 {
-String temper=G[0];
-for (int a=lineNumber;a<G.length;a++)
 {
+String temper=G[0]; //store Zeroth index String Array Element into temporary String for comparing String Array Elements  
+for (int a=lineNumber;a<G.length;a++)
+     {
  if (G[a].equals(temper))
 {
-//   System.out.println(G[a]+" test"+a);
+//   System.out.println(G[a]+" test"+a);  // to eliminate parent1 
  }
- else if (G[a].length()==7&&(G[a].startsWith("p"))&&G[a]!=temper)
+ else if (G[a].length()==7&&(G[a].startsWith("p")))  
  {
-tree.add(G[a]);
-}
- }//for
+tree.add(G[a]); 
+ }
+      }//for
 }//else
 	/*--------8th line-------*/
 if(G[line]==G[7])     
    {
 for (int a=lineNumber;a<G.length;a++)
   {
- if (G[a].length()==7&&(G[a].startsWith("c")))
+ if (G[a].length()==7&&(G[a].startsWith("c"))) 
  {
 	tree.add(G[a]);
 	}//if
@@ -163,3 +165,4 @@ for (int s=0;s<G.length;s++)
 switch(num) {
 case 1:*/     //   break; case 2://
 
+//&&G[a]!=temper
