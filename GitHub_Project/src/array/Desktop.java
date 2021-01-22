@@ -43,7 +43,7 @@ class B extends Thread {
 			  }
 			String SS = unique.toString();
 			String xx="Unique charset are  ";
-			FileWriter fr = new FileWriter("C:\\Users\\Karupu\\Desktop\\xyz.txt");
+			FileWriter fr = new FileWriter("C:\\Users\\Karupu\\Desktop\\xyz.txt",true);
 			fr.write(xx);
 			fr.write(SS);
 			fr.write("\n");
@@ -61,6 +61,7 @@ class B extends Thread {
 					if (a[i] == a[j])
 					 {
 						counter = counter + 1;
+						System.out.print(a[i]+" " );
 					 }
 				}
 				if (counter > 0) {
