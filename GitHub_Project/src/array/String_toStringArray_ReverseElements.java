@@ -30,16 +30,17 @@ public class String_toStringArray_ReverseElements {
 		G[j] = temp; // G[3]=temp(java) , for last itertion "java" stored to temp
  
 		for (int x = 0; x <= G.length - 1; x++) {
-			// System.out.println(G[x]); // to print the String Array G[]
+		//	 System.out.println(G[x]); // to print the String Array G[]
 		}
-    for(int w = 1 ; w <G.length;w++)
+    for(int w = 1 ; w <G.length;w++) 
     {
-	G[w]=G[w]+" ";
+	G[w]=G[w]+" ";    //we add space from 1st index o/p like [ilove java ] .
     }
 		/***************** To Reverse Element in String Array ********************/
 
 		char cr[] = new char[cc.length]; // declare cr array length (cc.length)
-		for (String s : G) {
+		
+		for (String s : G) {     // normal for loop for (int x=0;x<G.length;x++) {
 		cr = s.toCharArray(); // convert every String Array iteration to char Array
 		for (int i = 0; i < cr.length / 2; i++) 
 		{ 

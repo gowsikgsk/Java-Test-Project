@@ -1,3 +1,31 @@
+/*Task as below:
+Write a java program to list first child elements inside parent element based on input line
+number/tag name.
+Input would be line number/tag name.
+Output should be direct child element names of the input line number /tag name.
+Use the htmlFile.txt as sample (htmlFile.txt as attached within this package )
+
+Execution Result
+1. Input with line number:
+Input: 2
+Output: child1, child2, child3
+Input: 8
+Output: child11, child22, child33
+Input: 1
+Output: parent2, parent3
+
+2. Input with tags:
+Input: parent2
+Output: child1, child2, child3
+Input: parent3
+Output: child11, child22, child33
+Input: child33
+Output: grandchild44
+
+Parent, Child and Grandchild - tag names are for your understanding purpose, we will be testing
+it with Html tags (like div, pre), so please make your submission reliable to those tags also.
+The above is the sample. Program will be tested with HTML elements. */
+
 package array;
 import java.util.*;
 import java.io.*;

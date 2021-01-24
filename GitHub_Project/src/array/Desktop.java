@@ -86,7 +86,7 @@ class B extends Thread {
 				{
 					if (a[i] == a[j])
 					{
-						counter = counter + 1;
+					 counter = counter + 1;
 					}//if equal
 				} //inner for
 				if (counter==0)
