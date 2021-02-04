@@ -14,13 +14,16 @@
 <tr>
 <th>ID</th>
 <th>NAME</th>
-<th>GENDER</th>
-<th>EMAIL</th>
-<th>COURSE</th>
+<th>AGE</th>
+<th>license_no</th>
+<th>license_Expiry Date</th>
+<th>Location</th>
 <br>
 </tr>
 <%
 try
+
+
 {
 Class.forName("com.mysql.cj.jdbc.Driver");
 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/webappdb","root","");

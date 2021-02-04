@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head><sytle>
-
 <meta charset="ISO-8859-1">
 <title>Student Management System</title>
 </head></sytle>

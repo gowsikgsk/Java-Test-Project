@@ -3,7 +3,6 @@ package array;
 public class String_toStringArray_ReverseElements {
 /**** program to convert String To String Array without using Spilt Function***/
 	static String S = "i love java";
-
 	static void rev() {
 		String temp = "";
 		int counter = 0;
@@ -20,7 +19,7 @@ public class String_toStringArray_ReverseElements {
 		for (int k = 0; k <= cc.length - 1; k++) {
 			if (cc[k] == ' ') // this condition allows only cc[k] equal to space ' '
 			{
-				G[j] = temp ;
+				G[j] = temp;
 				j++; // for increment the String Array
 				temp = ""; // empty the temp
 			} else {
@@ -30,7 +29,7 @@ public class String_toStringArray_ReverseElements {
 		G[j] = temp; // G[3]=temp(java) , for last itertion "java" stored to temp
  
 		for (int x = 0; x <= G.length - 1; x++) {
-		//	 System.out.println(G[x]); // to print the String Array G[]
+		 System.out.print(G[x]); // to print the String Array G[]
 		}
     for(int w = 1 ; w <G.length;w++) 
     {

@@ -16,7 +16,7 @@ String course=request.getParameter("COURSE");
 try{
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/webappdb","root","");
-	PreparedStatement ps=con.prepareStatement("update sms1 set course=? where id=?");
+	PreparedStatement ps=con.prepareStatement("update sms1 set course=?,where id=?");
 	ps.setString(1,id);
 	ps.setString(2,course);
 	ps.executeUpdate();
