@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@page import="java.sql.*"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table height=200 width=200 border=1>
+<tr>
+<th>ID</th>
+<th>NAME</th>
+<th>AGE</th>
+<th>license_no</th>
+<th>license_Expiry Date</th>
+<th>Location</th>
+<br>
+</tr>
+<%
+String id=request.getParameter("ID");
+try
+{
+Class.forName("com.mysql.cj.jdbc.Driver");
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tms","root","");
+PreparedStatement ps=con.prepareStatement("Select * from  driver where id=1");
+ResultSet rs=ps.executeQuery();
+while(rs.next())
+{
+%>
+	<tr><td><br><%out.print(rs.getString(1));%><br><br></td>
+	<td><br><%out.print(rs.getString(2));%><br><br></td>
+	<td><br><%out.print(rs.getString(3));%><br><br></td>
+	<td><br><%out.print(rs.getString(4));%><br><br></td>
+	<td><br><%out.print(rs.getString(5));%><br><br></td>
+	<td><br><%out.print(rs.getString(6));%><br><br></td></tr>
+	<%
+	//out.print(rs.getString(1)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+rs.getString(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+rs.getString(3)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+rs.getString(4)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+rs.getString(5)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+rs.getString(6)+"<br><br>");
+}
+
+%>
+</table>
+</center>
+<%
+}
+catch(Exception e)
+{
+	System.out.println(e);
+}
+%>
+<a href=Driver.jsp>Driver Page </a>
+<a href=Home.jsp>Home Page </a>
+</body>
+</html>
