@@ -1,4 +1,5 @@
 package array;
+import java.util.HashMap;
 public class Seven {
 	public static void main(String[] args) {
 	String S = "India is my country and all indians are my brothers and sisters and i love my country very much";

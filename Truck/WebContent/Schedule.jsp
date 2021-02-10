@@ -4,6 +4,7 @@
      <%@page import ="java.util.ArrayList"%>
      <%@page import ="java.util.Iterator"%>
      <%@page import="java.sql.ResultSet"%>
+     <%@page import="java.util.HashMap"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,38 +13,43 @@
 </head>
 <body>
 <form action ="Schedule_java.jsp">
+
 <%
  int count=0;
 try{
 	//String id=request.getParameter("ID");
 	//String name=request.getParameter("NAME");
 	String a ="";
+	String b ="";
+	HashMap<String,String> has=new HashMap<String,String>();
 	ArrayList<String> ar=new ArrayList<String>();
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/tms","root","");
+	
 	PreparedStatement pe=con.prepareStatement("select id from driver");
-	PreparedStatement p=con.prepareStatement("select name from driver");
-	PreparedStatement truckid=con.prepareStatement("select id from truck");
-	PreparedStatement truckname=con.prepareStatement("select name from truck");
 	ResultSet drs=pe.executeQuery();
+	
+	PreparedStatement p=con.prepareStatement("select name from driver");
 	ResultSet dname=p.executeQuery();
+	
+	PreparedStatement truckid=con.prepareStatement("select id from truck");
 	ResultSet tid=truckid.executeQuery();
-	ResultSet tname=truckname.executeQuery();
-	//ResultSet r=pe.executeQuery();%>
-	<table height=300 width=300>
 	
-	
+	PreparedStatement truckname=con.prepareStatement("select name from truck");
+	ResultSet tname=truckname.executeQuery();%>
+
+<table height=300 width=300>
 	DriverID:<input type="text" name="driverid" list="drid" ><br>
 	 <datalist id="drid">
-	 <% while(drs.next()){  
-		    %>
+	 <% while(drs.next()){ 
+		 %>
 	<option value="<%=drs.getString(1)%>"><%=drs.getString(1)%></option>
-	    <% } %>
+	    <% 
+	  } %>
 	 </datalist>
-	 
-	
-	
-	Driver Name:<input type="text" name="drivername" list="drna" ><br>
+
+
+     Driver Name:<input type="text" name="drivername" list="drna" ><br>
 	 <datalist id="drna">
 	 <% while(dname.next()){  
 		    %>
