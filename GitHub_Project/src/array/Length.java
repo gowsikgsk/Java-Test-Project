@@ -100,11 +100,7 @@ System.out.println(i.next());
             }
 		    }
 	    }*/
-   
- 
- 
- 
- 
+
 	/* for(int i=0;true;i++)
 	    {
 		 System.out.println(D[i].lastIndexOf(G));
