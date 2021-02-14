@@ -36,8 +36,10 @@ public class Task1 {
 
 	public static void main(String[] args) throws IOException {
 
-		String inputHTMLTags = new String(Files.readAllBytes(Paths.get("/home/karupu/Downloads/htmlFile.txt")));
+		String inputHTMLTags = new String(Files.readAllBytes(Paths.get("C:\\Users\\Karupu\\Desktop\\abc.txt")));
 
+		System.out.println(inputHTMLTags);
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter 1 to enter the line number or 2 to enter the tag name:");
 		int userInput1 = sc.nextInt();
