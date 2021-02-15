@@ -11,10 +11,7 @@ public class tezts {
 			som=som/10;
 			sm=sm+nm;
 			System.out.println(sm+" = sm ; num = "+nm+" som ="+som);
-		}
-		
+		}	
 		System.out.println(sm+"= final output");
-
 	}
-
 }

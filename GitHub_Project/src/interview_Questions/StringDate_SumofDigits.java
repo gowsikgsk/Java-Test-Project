@@ -1,13 +1,11 @@
 /* To Sum the all Digits in given Date output will be the Single Digits
- * Ex: 29/12/2021
- * 
- *  */
-
+ * Ex: 12/12/2021  ((1+2)+(1+2)+(2+0+2+1))sum of digits is 11 in given date
+ *  finally need single digit output 11 sum of 1+1 =2  */
 package interview_Questions;
 import java.io.FileNotFoundException;
 public class StringDate_SumofDigits {
 	Void StrDate() throws FileNotFoundException {
-		String S="29/12/2021";
+		String S="12/12/2021";
 		String temp="";
 		for (int i=0;i<S.length();i++) 
 		{

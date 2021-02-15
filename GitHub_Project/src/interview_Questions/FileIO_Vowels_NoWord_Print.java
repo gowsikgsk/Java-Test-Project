@@ -1,4 +1,4 @@
-/* Interview Questions
+/* Interview Questions (MVI)
  * a) Read afile as input and print the total count of word that start 
  * with a vowel in the file.you can Assume that each word 
  *is Separated by a space character in the file.
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.TreeSet;
-public class MVI_Interview {
+public class FileIO_Vowels_NoWord_Print {
  static void test() throws IOException {
    int count=0;
    String txt = new String(Files.readAllBytes(Paths.get("C:\\Users\\Karupu\\Desktop\\abc.txt")));
