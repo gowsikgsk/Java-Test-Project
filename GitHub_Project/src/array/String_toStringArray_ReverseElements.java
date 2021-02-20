@@ -28,9 +28,9 @@ public class String_toStringArray_ReverseElements {
 		} // for loop
 		G[j] = temp; // G[3]=temp(java) , for last itertion "java" stored to temp
  
-		for (int x = 0; x <= G.length - 1; x++) {
-		 System.out.print(G[x]); // to print the String Array G[]
-		}
+//		for (int x = 0; x <= G.length - 1; x++) {
+//		 System.out.print(G[x]); // to print the String Array G[]
+//		}
     for(int w = 1 ; w <G.length;w++) 
     {
 	G[w]=G[w]+" ";    //we add space from 1st index o/p like [ilove java ] .

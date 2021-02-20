@@ -13,15 +13,11 @@ public class FileIO_Space {
     	       {
     	        if(ip[i]<33||ip[i]>127)
     	           {
-    	        	if(temp.contentEquals(""))
-    	        	   {
-    	        		//System.out.println("space");
+    	        	if(!temp.contentEquals(""))
+    	        	   {al.add(temp+" ");
+	        		    count=count+1;
+	        		    temp="";
     	        	   }
-    	        	 else{
-    	        		 al.add(temp+" ");
-    	        		    count=count+1;
-    	        		    temp="";
-    	        	     }
     	           }//if 
     	        else
     	           {
