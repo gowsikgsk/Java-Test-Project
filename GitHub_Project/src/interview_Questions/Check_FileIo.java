@@ -18,12 +18,9 @@ public class Check_FileIo {
 	        			S=S+temp.concat("\n");//new line
 	        	    }
 	        		}
-	        	    }
-	        	  
+	        	    }  
 	        	  return S;
 	          }
-	
-
 	public static void main(String[] args) throws IOException {
 		String txt = new String(Files.readAllBytes(Paths.get("C:\\Users\\Karupu\\Desktop\\the.txt")));
 	      Check_FileIo file=new Check_FileIo();
